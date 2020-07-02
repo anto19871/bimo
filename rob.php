@@ -43,14 +43,14 @@ echo color("yellow","           Time  : ".date('[d-m-Y] [H:i:s]')."   \n");
         $data1 = '{"client_name":"gojek:cons:android","data":{"otp":"' . $otp . '","otp_token":"' . $otptoken . '"},"client_secret":"83415d06-ec4e-11e6-a41b-6c40088ab51e"}';
         $verif = request("/v5/customers/phone/verify", null, $data1);
         if(strpos($verif, '"access_token"')){
-        echo color("white","BERHASIL MENDAFTAR\n");
+        echo color("yellow","BERHASIL MENDAFTAR\n");
         $token = getStr('"access_token":"','"',$verif);
         $uuid = getStr('"resource_owner_id":',',',$verif);
         echo color("white","+] Your access token : ".$token."\n\n");
         save("token.txt",$token); 
-        echo color("white","\n▬▬▬▬▬▬▬▬▬▬▬▬CLAIM VOUCHER▬▬▬▬▬▬▬▬▬▬▬▬");
-        echo "\n".color("white","CLAIM A..");
-        echo "\n".color("white"," Please wait");
+        echo color("yellow","\n▬▬▬▬▬▬▬▬▬▬▬▬CLAIM VOUCHER▬▬▬▬▬▬▬▬▬▬▬▬");
+        echo "\n".color("yellow","CLAIM A..");
+        echo "\n".color("yellow"," Please wait");
         for($a=1;$a<=3;$a++){
         echo color("white",".");
         sleep(5);
@@ -166,11 +166,11 @@ echo color("yellow","           Time  : ".date('[d-m-Y] [H:i:s]')."   \n");
                                         $debug['text'] = $pesan;
                                         $debug['respon'] = json_decode($datas, true);
          setpin:
-         echo "\n".color("white","SETPIN..!!!: y/n ");
+         echo "\n".color("yellow","SETPIN..!!!: y/n ");
          $pilih1 = trim(fgets(STDIN));
          if($pilih1 == "y" || $pilih1 == "Y"){
          //if($pilih1 == "y" && strpos($no, "628")){
-         echo color("white","▬▬▬▬▬▬▬▬▬▬▬▬▬▬ PIN MU = 050585 ▬▬▬▬▬▬▬▬▬▬▬▬")."\n";
+         echo color("yellow","▬▬▬▬▬▬▬▬▬▬▬▬▬▬ PIN MU = 050585 ▬▬▬▬▬▬▬▬▬▬▬▬")."\n";
          $data2 = '{"pin":"050585"}';
          $getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
          echo "Otp pin: ";
@@ -180,7 +180,7 @@ echo color("yellow","           Time  : ".date('[d-m-Y] [H:i:s]')."   \n");
          }else if($pilih1 == "n" || $pilih1 == "N"){
          die();
          }else{
-         echo color("white","-] GAGAL!!!\n");
+         echo color("red","-] GAGAL!!!\n");
          }
          }
          }
