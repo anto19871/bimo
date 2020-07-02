@@ -52,7 +52,7 @@ echo color("yellow","           Time  : ".date('[d-m-Y] [H:i:s]')."   \n");
         echo "\n".color("yellow","CLAIM A..");
         echo "\n".color("yellow"," Please wait");
         for($a=1;$a<=3;$a++){
-        echo color("white",".");
+        echo color("green",".");
         sleep(5);
         }
         $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"EATLAH"}');
