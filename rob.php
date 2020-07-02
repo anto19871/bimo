@@ -4,7 +4,7 @@ include "function.php";
 ulang:
 // function change(){
 echo color("red","             		SEKTOR VI \n");
-echo color("white","                    djancok-ID        \n");
+echo color("blue","                 Aremania-sampek-Ketam       \n");
 echo color("white","                  Format Nomor 62*** \n");
 echo color("yellow","           Time  : ".date('[d-m-Y] [H:i:s]')."   \n");
         $nama = nama();
