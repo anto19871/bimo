@@ -55,7 +55,7 @@ echo color("yellow","           Time  : ".date('[d-m-Y] [H:i:s]')."   \n");
         echo color("green",".");
         sleep(5);
         }
-        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"EATLAH"}');
+        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"G-VVD5KZR"}');
         $message = fetch_value($code1,'"message":"','"');
         if(strpos($code1, 'Promo kamu sudah bisa dipakai')){
         echo "\n".color("green","Message: ".$message);
@@ -69,7 +69,7 @@ echo color("yellow","           Time  : ".date('[d-m-Y] [H:i:s]')."   \n");
         echo color("green",".");
         sleep(35);
         }
-        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD2206"}');
+        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD0607"}');
         $message = fetch_value($code1,'"message":"','"');
         if(strpos($code1, 'Promo kamu sudah bisa dipakai.')){
         echo "\n".color("green","Message: ".$message);
@@ -83,7 +83,7 @@ echo color("yellow","           Time  : ".date('[d-m-Y] [H:i:s]')."   \n");
         echo color("green",".");
         sleep(3);
         }
-        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"PESANGOFOOD2206"}');
+        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"PESANGOFOOD0607"}');
         $message = fetch_value($code1,'"message":"','"');
         echo "\n".color("red"," Message: ".$message);
         echo "\n".color("yellow"," CLAIM D..");
