@@ -3,10 +3,13 @@ date_default_timezone_set('Asia/Jakarta');
 include "function.php";
 ulang:
 // function change(){
-echo color("red","             		SEKTOR VI \n");
-echo color("blue","                 Aremania-sampek-Ketam       \n");
-echo color("white","                  Format Nomor 62*** \n");
-echo color("yellow","           Time  : ".date('[d-m-Y] [H:i:s]')."   \n");
+echo	 "\e[93m		 ( SEKTOR VI )        \n";
+echo	 "\e[32;1m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n";
+echo	 "\e[96m         SCRIPT GOJEK 24 JULI 2020       \n";
+echo	 "\e[96m	        @bimo_nugraha				 \n";
+echo color("white","          Format Nomor 62*** \n");
+echo color("white","     Time  : ".date('[d-m-Y] [H:i:s]')."   \n");
+echo	 "\e[32;1m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n";
         $nama = nama();
         $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
         echo color("white"," NOMOR  : ");
@@ -170,8 +173,8 @@ echo color("yellow","           Time  : ".date('[d-m-Y] [H:i:s]')."   \n");
          $pilih1 = trim(fgets(STDIN));
          if($pilih1 == "y" || $pilih1 == "Y"){
          //if($pilih1 == "y" && strpos($no, "628")){
-         echo color("yellow","▬▬▬▬▬▬▬▬▬▬▬▬▬▬ PIN MU = 050585 ▬▬▬▬▬▬▬▬▬▬▬▬")."\n";
-         $data2 = '{"pin":"050585"}';
+         echo color("yellow","▬▬▬▬▬▬▬▬▬▬▬▬▬▬ PIN MU = 121212 ▬▬▬▬▬▬▬▬▬▬▬▬")."\n";
+         $data2 = '{"pin":"121212"}';
          $getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
          echo "Otp pin: ";
          $otpsetpin = trim(fgets(STDIN));
